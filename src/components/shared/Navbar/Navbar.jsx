@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Contexts/authProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        console.log("logout successful");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const navItems = ["Home", "Jobs", "Companies", "About", "Contact"];
 
   const navItem = navItems.map((item, index) => (
     <li key={index}>
-      <Link 
+      <Link
         to={`/${item.toLowerCase()}`}
         className="cursor-pointer font-semibold overflow-hidden relative z-100 group px-8 py-2 block"
       >
@@ -36,26 +49,39 @@ const Navbar = () => {
             {navItem}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-2xl text-red-700">JobsHere</Link>
+        <Link to="/" className="btn btn-ghost text-2xl text-red-700">
+          JobsHere
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navItem}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navItem}</ul>
       </div>
       <div className="navbar-end gap-3">
-        <Link 
-          to="/login" 
-          className="cursor-pointer btn bg-red-600 text-gray-900 hover:text-white font-semibold overflow-hidden relative z-100 group px-3 py-2 border-2 border-red-700 outline-red-900 group-hover:text-red-700 text-lg duration-500"
-        >
-          Login
-        </Link>
-        <Link 
-          to="/signup" 
-          className="cursor-pointer btn hover:bg-red-600 font-semibold overflow-hidden relative z-100 group px-3 py-2 text-red-700 border-2 border-red-700 outline-red-900 hover:text-gray-900 text-lg duration-500"
-        >
-          SignUp
-        </Link>
+        {user ? (
+          <>
+            <button
+              onClick={handleLogout}
+              className="cursor-pointer btn hover:bg-red-600 font-semibold overflow-hidden relative z-100 group px-3 py-2 text-red-700 border-2 border-red-700 outline-red-900 hover:text-gray-900 text-lg duration-500"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link
+              to="/login"
+              className="cursor-pointer btn bg-red-600 text-gray-900 hover:text-white font-semibold overflow-hidden relative z-100 group px-3 py-2 border-2 border-red-700 outline-red-900 group-hover:text-red-700 text-lg duration-500"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="cursor-pointer btn hover:bg-red-600 font-semibold overflow-hidden relative z-100 group px-3 py-2 text-red-700 border-2 border-red-700 outline-red-900 hover:text-gray-900 text-lg duration-500"
+            >
+              SignUp
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
