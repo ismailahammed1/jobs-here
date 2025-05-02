@@ -1,3 +1,3 @@
-
 jobshere
-#heroUI useing tailwind compone
+# daisyUI useing tailwind compone,
+# icons8, ractiocon
