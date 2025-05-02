@@ -29,17 +29,17 @@ const Banner = () => {
             Start your career journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
+            <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
               Browse Jobs
             </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
+            <button className="bg-transparent border-2 border-red-700 text-white hover:bg-red-700 hover:text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
               Learn More
             </button>
           </div>
         </div>
 
 
-        <div className="relative h-[400px] w-[500px] md:h-[400px] md:w-[400px] shrink-0">
+        <div className="relative h-[400px] w-[00px] md:h-[400px] md:w-[400px] shrink-0">
           <div className="absolute inset-0 overflow-hidden rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] border-4 border-white/20">
             <img
               src={ismail}
