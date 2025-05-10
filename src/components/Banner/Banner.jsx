@@ -29,10 +29,10 @@ const Banner = () => {
             Start your career journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
+            <button className="bg-red-600 hover:bg-white  text-white  hover:text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
               Browse Jobs
             </button>
-            <button className="bg-transparent border-2 border-red-700 text-white hover:bg-red-700 hover:text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
+            <button className="bg-transparent border-2 border-red-600 text-white hover:bg-red-700 hover:text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
               Learn More
             </button>
           </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import {  FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
-import jobs from "../../../assets/Icon/jobs-64.png"
+import { GrWorkshop } from 'react-icons/gr'
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-  <nav className='ml-10'>
+    <footer className=" bg-base-300 ">
+ <div className='max-w-7xl mx-auto footer sm:footer-horizontal text-base-content p-10 '>
+   <nav className='ml-10'>
     <h6 className="footer-title">  Browse Jobs
     </h6>
     <Link className="link link-hover">Account</Link>
@@ -35,9 +36,13 @@ const Footer = () => {
    
   </nav>
   <nav>
-    <h1 className="  text-gray-700 text-start font-bold text-2xl flex gap-2">
-      <img src={jobs} alt="" className='h-10 w-10' /> Jobs Here</h1>
-
+   
+       <Link to="/" className="flex items-center">
+              <GrWorkshop className="h-8 w-8 md:h-10 md:w-10 text-red-700"  />
+                
+                <span className="text-xl md:text-2xl text-red-700 ml-2 font-bold">JobsHere</span>
+              </Link>
+<h1>Find Your Dream</h1>
     <div className="grid grid-flow-col gap-4">
   <Link>
   <FaFacebook className='text-3xl text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400'/>
@@ -56,6 +61,7 @@ const Footer = () => {
   </Link>
     </div>
   </nav>
+ </div>
 </footer>
   )
 }

@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/authProvider";
-import jobs from "../../../assets/Icon/jobs-64.png";
-
+import { GrWorkshop } from "react-icons/gr";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
@@ -31,7 +30,7 @@ const Navbar = () => {
         to={item.path}
         className="cursor-pointer overflow-hidden relative z-100 group px-4 py-2 md:px-8 block"
       >
-        <span className="relative z-10 text-gray-200 group-hover:text-red-700 text-base md:text-lg duration-500">
+        <span className="relative z-10 text-gray-200 group-hover:text-red-700 text-base md:text-sm duration-500">
           {item.name}
         </span>
         <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-right" />
@@ -74,7 +73,8 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={jobs} alt="JobsHere Logo" className="h-8 w-8 md:h-10 md:w-10" />
+        <GrWorkshop className="h-8 w-8 md:h-10 md:w-10 text-red-700"  />
+          
           <span className="text-xl md:text-2xl text-red-700 ml-2 font-bold">JobsHere</span>
         </Link>
       </div>
@@ -130,13 +130,13 @@ const Navbar = () => {
           <>
             <Link
               to="/login"
-              className="cursor-pointer btn bg-red-600 text-gray-900 hover:text-white overflow-hidden relative z-100 group px-3 py-2 border-2 border-red-700 outline-red-900 group-hover:text-red-700 text-lg duration-500"
+              className="cursor-pointer   text-white hover:text-red-600 overflow-hidden relative z-100 group px-3 py-2  text-sm duration-500"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="cursor-pointer btn hover:bg-red-600 overflow-hidden relative z-100 group px-3 py-2 text-red-700 border-2 border-red-700 outline-red-900 hover:text-gray-900 text-lg duration-500"
+              className="cursor-pointer btn bg-red-600 hover:bg-white-600 hover:text-gray-900 overflow-hidden relative z-100  px-3 py-2 text-white   text-sm duration-500"
             >
               SignUp
             </Link>
