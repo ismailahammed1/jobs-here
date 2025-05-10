@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // components/JobCard.jsx
 import { motion } from "framer-motion";
 
