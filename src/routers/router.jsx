@@ -9,6 +9,8 @@ import FindJobPage from "../pages/FindJobPage/FindJobPage";
 import JobsListPage from "../pages/JobsList/JobsListPage";
 import JobDetailsPage from "../pages/JobDetailsPage/JobDetailsPage";
 import PostJobForm from "../pages/PostJobForm/PostJobForm";
+import ContactPage from "../pages/ContactPage/ContactPage";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,15 @@ const router = createBrowserRouter([
       {
         path: "post-job",
         element: <PostJobForm />
+      },
+      {
+        path: "contact",
+        element: <ContactPage />
+      },
+      {
+        path: "blog",
+        // This is the path for the blog page
+        element: <Blog />
       },
       
     ]

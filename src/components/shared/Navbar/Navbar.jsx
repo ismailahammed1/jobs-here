@@ -75,7 +75,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
         <GrWorkshop className="h-8 w-8 md:h-10 md:w-10 text-red-700"  />
           
-          <span className="text-xl md:text-2xl text-red-700 ml-2 font-bold">JobsHere</span>
+          <span className="text-sm md:text-2xl text-red-700 ml-2 font-bold">JobsHere</span>
         </Link>
       </div>
 
