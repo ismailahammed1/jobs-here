@@ -5,6 +5,10 @@ import Error from "../pages/Error/Error";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import Frequen from "../pages/Faq/Frequen";
+import FindJobPage from "../pages/FindJobPage/FindJobPage";
+import JobsListPage from "../pages/JobsList/JobsListPage";
+import JobDetailsPage from "../pages/JobDetailsPage/JobDetailsPage";
+import PostJobForm from "../pages/PostJobForm/PostJobForm";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +31,23 @@ const router = createBrowserRouter([
       {
         path: "faq",
         element: <Frequen />
-      }
+      },
+      {
+        path: "jobs-List",
+        element: <JobsListPage />
+      },
+      {
+        path: "jobs-details",
+        element: <JobDetailsPage />
+      },
+      {
+        path: "find-job",
+        element: <FindJobPage />
+      },
+      {
+        path: "post-job",
+        element: <PostJobForm />
+      },
       
     ]
   }

@@ -9,6 +9,8 @@ import StatsSection from "../../components/TestimonialsSection/StatsSection";
 import TestimonialsSection from "../../components/TestimonialsSection/TestimonialsSection";
 import ChooseJobHere from "../../components/ChooseJobHere/ChooseJobHere";
 import NewsArticlesSection from "../../components/NewsArticlesSection/NewsArticlesSection";
+import PriceCard from "../../components/PriceCard/PriceCard";
+import FeaturedCandidates from "../../components/FeaturedCandidates/FeaturedCandidates";
 
 const Home = () => {
   return (
@@ -70,12 +72,14 @@ const Home = () => {
         <CategorySection />
 
       </div>
-      <JobsList/>
+    <JobsList limit={6} />
       <TopCompanies/>
       <StatsSection/>
       <TestimonialsSection/>
       <ChooseJobHere/>
       <NewsArticlesSection/>
+      <PriceCard/>
+      <FeaturedCandidates/>
           </>
   );
 };
